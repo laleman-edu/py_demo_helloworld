@@ -9,3 +9,42 @@ git commit -m "filename.xxx"
 git push origin main 
     ...... origin es el nombre remoto del repositorio en GitHub.
     ...... main es el nombre de la rama por defecto.
+# ----------------------------------------------------------------------------- #
+
+QUESTION:
+If my development environment is an identical structure in 2 laptops, 1 used at main office and the other when traveling or outside office, would you recommend to change my settings?
+
+COPILOT ANSWER:
+If your development environments are identical on both laptops (same structure, tools, and configurations), you are in a good position for portable development. However, there are a few best practices and potential improvements to consider:
+
+### Recommendations:
+
+1. **Use Git and Remotes:**
+   - Ensure both laptops use Git for version control.
+   - Set up a remote repository (e.g., GitHub, GitLab, Bitbucket) so both laptops can push/pull code changes. This keeps your work synchronized and backed up.
+
+2. **Synchronize Settings and Dependencies:**
+   - Use configuration files (like `.editorconfig`, `.env`, `.gitconfig`, etc.) in your repository to ensure consistent settings.
+   - Use dependency managers (like `package.json`, `requirements.txt`, `Pipfile`, etc.) to make installing/updating dependencies easy and consistent.
+
+3. **Consider Dotfile Management:**
+   - Store your shell/editor configs (dotfiles) in a versioned repository for easy syncing between devices.
+
+4. **Automate Environment Setup:**
+   - Use setup scripts or tools like Docker, Ansible, or shell scripts to quickly recreate your environment on a new machine.
+
+5. **Backup Non-Code Data:**
+   - Use cloud services (OneDrive, Dropbox, Google Drive) for non-code files or assets that aren’t suited for Git (e.g., large binary files).
+
+6. **Handle SSH Keys and Authentication:**
+   - Make sure both machines have proper SSH keys and access to your remote repositories.
+
+7. **Be Careful with Local-Only Files:**
+   - Add patterns for local/machine-specific files to `.gitignore` to avoid accidental commits.
+
+### Should You Change Your Settings?
+
+- **If you are already using the above best practices:** No significant changes are needed.
+- **If you are not yet synchronizing via Git or using configuration management:** Yes, consider updating your workflow for easier, safer, and more reliable switching between laptops.
+
+Would you like specific advice based on the tools or languages you use? ...... pending questions.....
