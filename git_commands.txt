@@ -1,0 +1,11 @@
+git config --global user.name "laleman-edu" o "laleman77"
+git config --global user.email "laleman@intermetro.edu" o "laleman@gmail.com"
+
+git --version
+
+git pull
+git add "filename.xxx"
+git commit -m "filename.xxx"
+git push origin main 
+    ...... origin es el nombre remoto del repositorio en GitHub.
+    ...... main es el nombre de la rama por defecto.
